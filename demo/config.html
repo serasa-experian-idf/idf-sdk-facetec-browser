@@ -18,6 +18,7 @@
         const config = {
           imageBase64: reader.result,
           wizard: document.getElementById('wizard').checked,
+          backgroundColor: document.getElementById('backgroundColor').value,
           wizardCorPrimary: document.getElementById('wizardCorPrimary').value,
           wizardCorTextCorpo: document.getElementById('wizardCorTextCorpo').value,
           wizardCorTextTitle: document.getElementById('wizardCorTextTitle').value,
@@ -62,6 +63,7 @@
         const config = {
           imageBase64: '',
           wizard: document.getElementById('wizard').checked,
+          backgroundColor: document.getElementById('backgroundColor').value,
           wizardCorPrimary: document.getElementById('wizardCorPrimary').value,
           wizardCorTextCorpo: document.getElementById('wizardCorTextCorpo').value,
           wizardCorTextTitle: document.getElementById('wizardCorTextTitle').value,
@@ -110,6 +112,7 @@
     function updateForm() {
       const config = loadConfig();
       document.getElementById('wizard').checked = config.wizard;
+      document.getElementById('backgroundColor').value = config.backgroundColor
       document.getElementById('wizardCorPrimary').value = config.wizardCorPrimary
       document.getElementById('wizardCorTextCorpo').value = config.wizardCorTextCorpo
       document.getElementById('wizardCorTextTitle').value = config.wizardCorTextTitle
@@ -158,6 +161,9 @@
 
     <label for="wizardButtonRadius">wizardButtonRadius:</label>
     <input type="text" id="wizardButtonRadius" name="wizardButtonRadius" value=""><br><br>
+
+    <label for="backgroundColor">backgroundColor:</label>
+    <input type="color" id="backgroundColor" name="backgroundColor" value="#fff"><br><br>
 
     <label for="wizardCorPrimary">wizardCorPrimary:</label>
     <input type="color" id="wizardCorPrimary" name="wizardCorPrimary" value="#fff"><br><br>
