@@ -1,4 +1,3 @@
-//
 import { FaceTecIDScanProcessor, FaceTecFaceScanProcessor } from "./FaceTecPublicApi";
 /**
  * FaceTecSession - Core class responsible for launching the FaceTec SDK and handling results.
