@@ -18,6 +18,7 @@
         const config = {
           imageBase64: reader.result,
           wizard: document.getElementById('wizard').checked,
+          botaoCancelar: document.getElementById('botaoCancelar').checked,
           backgroundColor: document.getElementById('backgroundColor').value,
           wizardCorPrimary: document.getElementById('wizardCorPrimary').value,
           wizardCorTextCorpo: document.getElementById('wizardCorTextCorpo').value,
@@ -63,6 +64,7 @@
         const config = {
           imageBase64: '',
           wizard: document.getElementById('wizard').checked,
+          botaoCancelar: document.getElementById('botaoCancelar').checked,
           backgroundColor: document.getElementById('backgroundColor').value,
           wizardCorPrimary: document.getElementById('wizardCorPrimary').value,
           wizardCorTextCorpo: document.getElementById('wizardCorTextCorpo').value,
@@ -105,13 +107,14 @@
     }
 
     function clearConfigForm() {
-      localStorage.removeItem('config');
+      localStorage.removeItem('config_facetec');
       updateForm();
     }
 
     function updateForm() {
       const config = loadConfig();
       document.getElementById('wizard').checked = config.wizard;
+      document.getElementById('botaoCancelar').checked = config.botaoCancelar;
       document.getElementById('backgroundColor').value = config.backgroundColor
       document.getElementById('wizardCorPrimary').value = config.wizardCorPrimary
       document.getElementById('wizardCorTextCorpo').value = config.wizardCorTextCorpo
@@ -158,6 +161,9 @@
   <form onsubmit="saveConfigForm(); return false;">
     <label for="wizard">Iniciar Wizard:</label>
     <input type="checkbox" id="wizard" name="wizard"><br><br>
+
+    <label for="botaoCancelar">Botão cancelar:</label>
+    <input type="checkbox" id="botaoCancelar" name="botaoCancelar"><br><br>
 
     <label for="wizardButtonRadius">wizardButtonRadius:</label>
     <input type="text" id="wizardButtonRadius" name="wizardButtonRadius" value=""><br><br>
