@@ -87,8 +87,17 @@ body {
   max-height: 40%;
 }
 
-#pdfFrame {
-  display: none;
-  width: 100%;
-  height: 100%;
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+dl,
+ol,
+p,
+pre,
+ul {
+  margin-bottom: 10em;
+  margin-top: 10em;
 }
