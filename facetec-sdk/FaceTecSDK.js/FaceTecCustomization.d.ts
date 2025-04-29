@@ -12,7 +12,8 @@ export declare enum FaceTecCancelButtonLocation {
 }
 export declare enum FaceTecSecurityWatermarkImage {
     FaceTec_ZoOm = 0,
-    FaceTec = 1
+    FaceTec = 1,
+    FaceTec_Powered_By = 2
 }
 export declare class FaceTecRect {
     x: number;
