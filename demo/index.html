@@ -34,7 +34,10 @@
     <div class="error-message" id="error-message">Mensagem de erro aqui</div>
   </div>
 
-  <div id="selfie"></div>
+  <div id="selfie" style="height: inherit; top:0"></div>
+  <div id="footerPink" style="display: none; background-color: pink;color: black;text-align: center;height: 5%;width: 100%;position: absolute;bottom: 0;z-index: 1000;">
+    Footer
+  </div>
 
   <div class="sdkResult" id="sdkResult">
     <div class="imagesResult">
@@ -49,6 +52,22 @@
   <script src="js/config.js"></script>
   <script src="js/brscan-sdk-selfie-demo.js"></script>
   <script src="../facetec-sdk/FaceTecSDK.js/FaceTecSDK.js"></script>
+
+
+  <script>
+    const footerDisplay = JSON.parse(localStorage.getItem('config_facetec')).footer;
+    console.log(localStorage.getItem('config_facetec'))
+    const footerElement = document.getElementById('footerPink'); // Certifique-se de que 'footerElement' corresponde ao ID do seu elemento HTML
+    if (footerDisplay === true) {
+          footerElement.style.display = 'block'; // Mostrar o elemento
+          document.getElementById('selfie').style.height = '95%'
+      } else {
+          footerElement.style.display = 'none'; // Ocultar o elemento
+           document.getElementById('selfie').style.height = '100%'
+      }
+
+  </script>
+
 </body>
 
 </html>
